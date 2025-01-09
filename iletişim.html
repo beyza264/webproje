@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+      #ff{
+       
+        background-image:url("arkap4.jpg") ;
+        background-size: cover; /* Resmi sayfanın boyutuna göre ayarla */
+    background-repeat: no-repeat; /* Resmin tekrar etmesini engelle */
+    background-position: center; /* Resmi ortala */
+      }
+    </style>
+</head>
+<body id="ff">
+    <header>
+    
+        <nav>
+           <div id="navkutu">
+           
+            <a class="ilk" href="anasayfa.html">ANASAYFA</a>
+            <a class="iki" href="hakkımda.html">HAKKIMDA</a>  
+            <a class="bes" href="blog.html">BLOG</a>
+            <a class="dört" href="projeler.html">PROJELER</a>
+            <a class="üc" href="iletişim.html">İLETİŞİM</a>
+                                
+    </div>
+        </nav>
+      </header>
+        <h1 id="con"> İletişime Geçmek İçin Bu Alanı Doldurun:</h1> <br> <br>
+        <p></p>
+        <form id="iletisimform">
+          <label for="name" style="color: rgb(0,255,60);">İsim:</label>
+          <input type="text" id="name" name="name" placeholder="İsminizi Giriniz:" required>
+            
+          <label for="email" style="color: rgb(0,255,60);">E-posta:</label>
+          <input type="email" id="email" name="email" placeholder="Mailinizi Giriniz:" required>
+      
+          
+          <label for="message" style="color: rgb(0,255,60);">Mesaj:</label>
+          <textarea id="message" name="message" rows="4" placeholder="Mesajınızı Giriniz:" required></textarea>
+
+          <button type="submit">Gönder</button>
+        </form>
+       
+        <div id="successMessage" style="display:none; color: green; margin-top: 10px;">
+          Mesajınız başarıyla gönderildi!
+        </div> <br><br><br><br>
+        <footer id="alt-kisim" style="color: rgb(0,255,60); font-size:large;">
+          <p id="haklar">© 2025 Dizi Dünyası - Tüm Hakları Saklıdır</p>
+          <p id="iletisim-bilgileri">E-posta: iletisim@dizidunyasi.com | Telefon: 555-123-4567</p>
+      </footer>
+  
+        <script>
+          const form = document.getElementById("iletisimform");
+          const successMessage = document.getElementById("successMessage");
+      
+          form.addEventListener("submit", function(event) {
+            event.preventDefault(); // Formun varsayılan davranışını engeller
+            if (form.checkValidity()) {
+              successMessage.style.display = "block";
+              form.reset(); // Form alanlarını sıfırlar
+            }
+          });
+        </script>
+</body>
+</html>
